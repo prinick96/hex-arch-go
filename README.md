@@ -2,7 +2,7 @@
 <img src="https://user-images.githubusercontent.com/11221009/171791133-e7da86a4-038e-4629-8c41-49ab50d6f25a.gif" />
 </p>
 
-# Clean Architecture / Hexagonal Architecture Template for Go
+# Clean Architecture / Hexagonal Architecture in Go
 ✔️ A TODO System with hexagonal architecture / clean architecture what you can use how template for your projects
 
 ✔️ Includes a simple CI.yml that you can use to get started with continuous integration in Github Actions
