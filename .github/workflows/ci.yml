@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  ci-workflow:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: docker build -t hex-arch-go .
+
+      - name: Start the Docker container
+        run: docker-compose --env-file .env.production up  -d
+
+      - name: Run unit tests
+        run: make unit-test
+
+      # Integration tests in the pipeline
+      #- name: Run integration tests
+      #  run: make integration-test
+
+      # Push on registry and go with CD!
