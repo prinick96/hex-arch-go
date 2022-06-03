@@ -1,0 +1,8 @@
+version: "3.9"  
+
+services:
+  hex-arch-go:
+    container_name: hex-arch-go-container
+    image: hex-arch-go
+    ports:
+      - "$PORT:$PORT"
